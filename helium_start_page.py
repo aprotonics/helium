@@ -1,12 +1,12 @@
 from helium import *
 import json
+from selenium.webdriver import ChromeOptions
 
 
 start_chrome('https://tle.ivanstanojevic.me/api/tle/48272')
 
 all_texts = find_all(Text())
 all_text_fields = find_all(TextField())
-
 
 tle_text = all_texts[0].value
 
@@ -32,17 +32,6 @@ print()
 
 print(tle_text_obj["satelliteId"])
 print()
-
-
-
-
-
-
-
-
-
-
-
 
 print(len(all_text_fields))
 print()
